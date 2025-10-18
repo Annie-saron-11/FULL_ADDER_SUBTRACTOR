@@ -43,13 +43,61 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+```
+
+
+module ex4(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
+
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
+
+module ex44(df, bo, a, b, bin);
+    output df;
+    output bo;
+    input a;
+    input b;
+    input bin;
+	wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=(~a&b);
+	 assign w3=(~w1&bin);
+	 assign df=w1^bin;
+	 assign bo=w2|w3;
+
+endmodule
+
+
+```
 
 /* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
 **RTL Schematic**
 
+<img width="555" height="243" alt="image" src="https://github.com/user-attachments/assets/0f10a9b7-f462-40be-a1d9-141710e6fce4" />
+
+
+<img width="517" height="213" alt="image" src="https://github.com/user-attachments/assets/ac4c455e-976c-45d4-bd1c-d811ca72d9da" />
+
+
+
 **Output Timing Waveform**
+
+<img width="1906" height="1091" alt="image" src="https://github.com/user-attachments/assets/3a178124-a805-4523-a16c-46c1cd070b5b" />
+
+<img width="1914" height="1119" alt="image" src="https://github.com/user-attachments/assets/50912eea-0129-44c5-99ab-77a60f0c043c" />
+
+
 
 **Result:**
 
